@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{9F8EE3CD-821E-4CA7-9331-3788B64CD2AA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LibHandLandmarksTest</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <ProjectName>LibHandLandmarksTest</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;GOOGLE_GLOG_DLL_DECL=;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\ThirdParty\opencv4.4.0\mybuild\install\include;E:\OpenSource\XPlatform\mediapipe-master;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\external\com_github_glog_glog\_virtual_includes\windows_glog_headers;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\external\com_github_gflags_gflags\_virtual_includes\gflags;C:\Users\Thredim\_bazel_Thredim\u6j43urp\external;C:\Users\Thredim\_bazel_Thredim\u6j43urp\external\com_google_absl;C:\Users\Thredim\_bazel_Thredim\u6j43urp\external\com_google_protobuf\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>E:\ThirdParty\opencv4.4.0\mybuild\install\x64\vc14\lib;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\external\all_libs;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\mediapipe\all_libs;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\mediapipe\examples\desktop\my_hand_tracking;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/WHOLEARCHIVE:pass_through_calculator.lo.lib
+/WHOLEARCHIVE:my_pass_through_calculator.lo.lib
+/WHOLEARCHIVE:immediate_mux_calculator.lo.lib
+/WHOLEARCHIVE:packet_inner_join_calculator.lo.lib
+/WHOLEARCHIVE:opencv_video_decoder_calculator.lo.lib
+/WHOLEARCHIVE:opencv_video_encoder_calculator.lo.lib
+/WHOLEARCHIVE:opencv_video_encoder_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:constant_side_packet_calculator.lo.lib
+/WHOLEARCHIVE:constant_side_packet_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:merge_calculator.lo.lib
+/WHOLEARCHIVE:hand_renderer_cpu.lo.lib
+/WHOLEARCHIVE:annotation_overlay_calculator.lo.lib
+/WHOLEARCHIVE:annotation_overlay_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:detections_to_render_data_calculator.lo.lib
+/WHOLEARCHIVE:detections_to_render_data_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:labels_to_render_data_calculator.lo.lib
+/WHOLEARCHIVE:labels_to_render_data_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:landmarks_to_render_data_calculator.lo.lib
+/WHOLEARCHIVE:landmarks_to_render_data_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:rect_to_render_data_calculator.lo.lib
+/WHOLEARCHIVE:rect_to_render_data_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:hand_landmark_tracking_cpu.lo.lib
+/WHOLEARCHIVE:hand_landmark_cpu.lo.lib
+/WHOLEARCHIVE:split_vector_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_classification_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_classification_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:tensors_to_floats_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_landmarks_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_landmarks_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:landmark_letterbox_removal_calculator.lo.lib
+/WHOLEARCHIVE:landmark_projection_calculator.lo.lib
+/WHOLEARCHIVE:landmark_projection_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:logic_calculator.lo.lib
+/WHOLEARCHIVE:logic_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:thresholding_calculator.lo.lib
+/WHOLEARCHIVE:thresholding_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:hand_landmark_landmarks_to_roi.lo.lib
+/WHOLEARCHIVE:split_normalized_landmark_list_calculator.lo.lib
+/WHOLEARCHIVE:split_vector_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:hand_landmarks_to_rect_calculator.lo.lib
+/WHOLEARCHIVE:palm_detection_detection_to_roi.lo.lib
+/WHOLEARCHIVE:detections_to_rects_calculator.lo.lib
+/WHOLEARCHIVE:detections_to_rects_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:rect_transformation_calculator.lo.lib
+/WHOLEARCHIVE:rect_transformation_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:begin_loop_calculator.lo.lib
+/WHOLEARCHIVE:matrix_data_cc_proto.lo.lib
+/WHOLEARCHIVE:clip_vector_size_calculator.lo.lib
+/WHOLEARCHIVE:clip_vector_size_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:end_loop_calculator.lo.lib
+/WHOLEARCHIVE:render_data_cc_proto.lo.lib
+/WHOLEARCHIVE:color_cc_proto.lo.lib
+/WHOLEARCHIVE:flow_limiter_calculator.lo.lib
+/WHOLEARCHIVE:gate_calculator.lo.lib
+/WHOLEARCHIVE:gate_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:previous_loopback_calculator.lo.lib
+/WHOLEARCHIVE:immediate_input_stream_handler.lo.lib
+/WHOLEARCHIVE:image_properties_calculator.lo.lib
+/WHOLEARCHIVE:association_norm_rect_calculator.lo.lib
+/WHOLEARCHIVE:association_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:collection_has_min_size_calculator.lo.lib
+/WHOLEARCHIVE:collection_has_min_size_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:filter_collection_calculator.lo.lib
+/WHOLEARCHIVE:classification_cc_proto.lo.lib
+/WHOLEARCHIVE:landmark_cc_proto.lo.lib
+/WHOLEARCHIVE:palm_detection_cpu.lo.lib
+/WHOLEARCHIVE:image_to_tensor_calculator.lo.lib
+/WHOLEARCHIVE:image_to_tensor_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:rect_cc_proto.lo.lib
+/WHOLEARCHIVE:inference_calculator.lo.lib
+/WHOLEARCHIVE:inference_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:fixed_size_input_stream_handler.lo.lib
+/WHOLEARCHIVE:fixed_size_input_stream_handler_cc_proto.lo.lib
+/WHOLEARCHIVE:tensors_to_detections_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_detections_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:ssd_anchors_calculator.lo.lib
+/WHOLEARCHIVE:ssd_anchors_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:anchor_cc_proto.lo.lib
+/WHOLEARCHIVE:tflite_custom_op_resolver_calculator.lo.lib
+/WHOLEARCHIVE:tflite_custom_op_resolver_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:cpu_op_resolver.lo.lib
+/WHOLEARCHIVE:framework_lib.lo.lib
+/WHOLEARCHIVE:common.lo.lib
+/WHOLEARCHIVE:detection_letterbox_removal_calculator.lo.lib
+/WHOLEARCHIVE:non_max_suppression_calculator.lo.lib
+/WHOLEARCHIVE:non_max_suppression_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:sink.lo.lib
+/WHOLEARCHIVE:callback_packet_calculator.lo.lib
+/WHOLEARCHIVE:callback_packet_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:default_input_stream_handler.lo.lib
+/WHOLEARCHIVE:default_input_stream_handler_cc_proto.lo.lib
+/WHOLEARCHIVE:in_order_output_stream_handler.lo.lib
+/WHOLEARCHIVE:calculator_profile_cc_proto.lo.lib
+/WHOLEARCHIVE:thread_pool_executor_cc_proto.lo.lib
+/WHOLEARCHIVE:calculator_graph_template_cc_proto.lo.lib
+/WHOLEARCHIVE:proto_descriptor_cc_proto.lo.lib
+/WHOLEARCHIVE:calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:calculator_options_cc_proto.lo.lib
+/WHOLEARCHIVE:packet_factory_cc_proto.lo.lib
+/WHOLEARCHIVE:packet_generator_cc_proto.lo.lib
+/WHOLEARCHIVE:status_handler_cc_proto.lo.lib
+/WHOLEARCHIVE:stream_handler_cc_proto.lo.lib
+/WHOLEARCHIVE:mediapipe_options_cc_proto.lo.lib
+/WHOLEARCHIVE:detection_cc_proto.lo.lib
+/WHOLEARCHIVE:image_format_cc_proto.lo.lib
+/WHOLEARCHIVE:location.lo.lib
+/WHOLEARCHIVE:location_data_cc_proto.lo.lib
+/WHOLEARCHIVE:locus_cc_proto.lo.lib
+/WHOLEARCHIVE:rasterization_cc_proto.lo.lib
+/WHOLEARCHIVE:protobuf.lo.lib
+/WHOLEARCHIVE:protobuf_lite.lo.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;GOOGLE_GLOG_DLL_DECL=;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\ThirdParty\opencv4.4.0\mybuild\install\include;E:\OpenSource\XPlatform\mediapipe-master;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\external\com_github_glog_glog\_virtual_includes\windows_glog_headers;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\external\com_github_gflags_gflags\_virtual_includes\gflags;C:\Users\Thredim\_bazel_Thredim\u6j43urp\external;C:\Users\Thredim\_bazel_Thredim\u6j43urp\external\com_google_absl;C:\Users\Thredim\_bazel_Thredim\u6j43urp\external\com_google_protobuf\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>E:\ThirdParty\opencv4.4.0\mybuild\install\x64\vc14\lib;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\external\all_libs;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\mediapipe\all_libs;C:\Users\Thredim\_bazel_Thredim\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\mediapipe\examples\desktop\my_hand_tracking;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/WHOLEARCHIVE:pass_through_calculator.lo.lib
+/WHOLEARCHIVE:my_pass_through_calculator.lo.lib
+/WHOLEARCHIVE:immediate_mux_calculator.lo.lib
+/WHOLEARCHIVE:packet_inner_join_calculator.lo.lib
+/WHOLEARCHIVE:opencv_video_decoder_calculator.lo.lib
+/WHOLEARCHIVE:opencv_video_encoder_calculator.lo.lib
+/WHOLEARCHIVE:opencv_video_encoder_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:constant_side_packet_calculator.lo.lib
+/WHOLEARCHIVE:constant_side_packet_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:merge_calculator.lo.lib
+/WHOLEARCHIVE:hand_renderer_cpu.lo.lib
+/WHOLEARCHIVE:annotation_overlay_calculator.lo.lib
+/WHOLEARCHIVE:annotation_overlay_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:detections_to_render_data_calculator.lo.lib
+/WHOLEARCHIVE:detections_to_render_data_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:labels_to_render_data_calculator.lo.lib
+/WHOLEARCHIVE:labels_to_render_data_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:landmarks_to_render_data_calculator.lo.lib
+/WHOLEARCHIVE:landmarks_to_render_data_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:rect_to_render_data_calculator.lo.lib
+/WHOLEARCHIVE:rect_to_render_data_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:hand_landmark_tracking_cpu.lo.lib
+/WHOLEARCHIVE:hand_landmark_cpu.lo.lib
+/WHOLEARCHIVE:split_vector_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_classification_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_classification_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:tensors_to_floats_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_landmarks_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_landmarks_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:landmark_letterbox_removal_calculator.lo.lib
+/WHOLEARCHIVE:landmark_projection_calculator.lo.lib
+/WHOLEARCHIVE:landmark_projection_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:logic_calculator.lo.lib
+/WHOLEARCHIVE:logic_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:thresholding_calculator.lo.lib
+/WHOLEARCHIVE:thresholding_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:hand_landmark_landmarks_to_roi.lo.lib
+/WHOLEARCHIVE:split_normalized_landmark_list_calculator.lo.lib
+/WHOLEARCHIVE:split_vector_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:hand_landmarks_to_rect_calculator.lo.lib
+/WHOLEARCHIVE:palm_detection_detection_to_roi.lo.lib
+/WHOLEARCHIVE:detections_to_rects_calculator.lo.lib
+/WHOLEARCHIVE:detections_to_rects_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:rect_transformation_calculator.lo.lib
+/WHOLEARCHIVE:rect_transformation_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:begin_loop_calculator.lo.lib
+/WHOLEARCHIVE:matrix_data_cc_proto.lo.lib
+/WHOLEARCHIVE:clip_vector_size_calculator.lo.lib
+/WHOLEARCHIVE:clip_vector_size_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:end_loop_calculator.lo.lib
+/WHOLEARCHIVE:render_data_cc_proto.lo.lib
+/WHOLEARCHIVE:color_cc_proto.lo.lib
+/WHOLEARCHIVE:flow_limiter_calculator.lo.lib
+/WHOLEARCHIVE:gate_calculator.lo.lib
+/WHOLEARCHIVE:gate_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:previous_loopback_calculator.lo.lib
+/WHOLEARCHIVE:immediate_input_stream_handler.lo.lib
+/WHOLEARCHIVE:image_properties_calculator.lo.lib
+/WHOLEARCHIVE:association_norm_rect_calculator.lo.lib
+/WHOLEARCHIVE:association_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:collection_has_min_size_calculator.lo.lib
+/WHOLEARCHIVE:collection_has_min_size_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:filter_collection_calculator.lo.lib
+/WHOLEARCHIVE:classification_cc_proto.lo.lib
+/WHOLEARCHIVE:landmark_cc_proto.lo.lib
+/WHOLEARCHIVE:palm_detection_cpu.lo.lib
+/WHOLEARCHIVE:image_to_tensor_calculator.lo.lib
+/WHOLEARCHIVE:image_to_tensor_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:rect_cc_proto.lo.lib
+/WHOLEARCHIVE:inference_calculator.lo.lib
+/WHOLEARCHIVE:inference_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:fixed_size_input_stream_handler.lo.lib
+/WHOLEARCHIVE:fixed_size_input_stream_handler_cc_proto.lo.lib
+/WHOLEARCHIVE:tensors_to_detections_calculator.lo.lib
+/WHOLEARCHIVE:tensors_to_detections_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:ssd_anchors_calculator.lo.lib
+/WHOLEARCHIVE:ssd_anchors_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:anchor_cc_proto.lo.lib
+/WHOLEARCHIVE:tflite_custom_op_resolver_calculator.lo.lib
+/WHOLEARCHIVE:tflite_custom_op_resolver_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:cpu_op_resolver.lo.lib
+/WHOLEARCHIVE:framework_lib.lo.lib
+/WHOLEARCHIVE:common.lo.lib
+/WHOLEARCHIVE:detection_letterbox_removal_calculator.lo.lib
+/WHOLEARCHIVE:non_max_suppression_calculator.lo.lib
+/WHOLEARCHIVE:non_max_suppression_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:sink.lo.lib
+/WHOLEARCHIVE:callback_packet_calculator.lo.lib
+/WHOLEARCHIVE:callback_packet_calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:default_input_stream_handler.lo.lib
+/WHOLEARCHIVE:default_input_stream_handler_cc_proto.lo.lib
+/WHOLEARCHIVE:in_order_output_stream_handler.lo.lib
+/WHOLEARCHIVE:calculator_profile_cc_proto.lo.lib
+/WHOLEARCHIVE:thread_pool_executor_cc_proto.lo.lib
+/WHOLEARCHIVE:calculator_graph_template_cc_proto.lo.lib
+/WHOLEARCHIVE:proto_descriptor_cc_proto.lo.lib
+/WHOLEARCHIVE:calculator_cc_proto.lo.lib
+/WHOLEARCHIVE:calculator_options_cc_proto.lo.lib
+/WHOLEARCHIVE:packet_factory_cc_proto.lo.lib
+/WHOLEARCHIVE:packet_generator_cc_proto.lo.lib
+/WHOLEARCHIVE:status_handler_cc_proto.lo.lib
+/WHOLEARCHIVE:stream_handler_cc_proto.lo.lib
+/WHOLEARCHIVE:mediapipe_options_cc_proto.lo.lib
+/WHOLEARCHIVE:detection_cc_proto.lo.lib
+/WHOLEARCHIVE:image_format_cc_proto.lo.lib
+/WHOLEARCHIVE:location.lo.lib
+/WHOLEARCHIVE:location_data_cc_proto.lo.lib
+/WHOLEARCHIVE:locus_cc_proto.lo.lib
+/WHOLEARCHIVE:rasterization_cc_proto.lo.lib
+/WHOLEARCHIVE:protobuf.lo.lib
+/WHOLEARCHIVE:protobuf_lite.lo.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libhandlandmarks.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

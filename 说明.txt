@@ -1,0 +1,8 @@
+C:\Users\*\_bazel_*\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\external\all_libs
+C:\Users\*\_bazel_*\u6j43urp\execroot\mediapipe\bazel-out\x64_windows-opt\bin\mediapipe\all_libs
+均有op_resolver.lib status.lib 依赖路径将external前置 将mediapipe的op_resolver.lib status.lib重命名为op_resolver_mediapipe.lib status_mediapipe.lib
+
+GOOGLE_GLOG_DLL_DECL=
+set GLOG_logtostderr=1
+
+/WHOLEARCHIVE 111 .lo.lib
